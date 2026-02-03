@@ -64,7 +64,7 @@ export default function SavedJobs({ onClose }: SavedJobsProps) {
     setMaintenanceResult(null);
     
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://demo-addon-apis.theodin.in/job';
       const response = await axios.post(`${API_URL}/api/jobs/maintenance`, {
         batchSize: 10,
         delayBetweenJobs: 1000,

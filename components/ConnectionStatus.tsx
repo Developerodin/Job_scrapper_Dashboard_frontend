@@ -9,7 +9,7 @@ export default function ConnectionStatus() {
   useEffect(() => {
     const checkConnection = async () => {
       try {
-        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://demo-addon-apis.theodin.in/job';
         const response = await fetch(`${API_URL}/health`);
         setIsConnected(response.ok);
       } catch (error) {
