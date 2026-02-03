@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://demo-addon-apis.theodin.in/job';
 
 export interface JobFilters {
   job_title?: string;
@@ -43,6 +43,7 @@ export interface Job {
   experience_level?: string;
   job_id?: string; // LinkedIn job ID
   source?: string; // e.g., "linkedin"
+  is_expired?: boolean; // Saved jobs: marked expired by backend
 }
 
 export interface SearchResponse {

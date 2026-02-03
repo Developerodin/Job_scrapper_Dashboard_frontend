@@ -45,8 +45,8 @@ export default function JobList({
         break;
       case 'salary':
         sorted.sort((a, b) => {
-          const salaryA = a.salary_max || a.salary_maximum || a.salary_min || a.salary_minimum || a.salary || 0;
-          const salaryB = b.salary_max || b.salary_maximum || b.salary_min || b.salary_minimum || b.salary || 0;
+          const salaryA = a.salary_max ?? a.salary_min ?? a.salary ?? 0;
+          const salaryB = b.salary_max ?? b.salary_min ?? b.salary ?? 0;
           return salaryB - salaryA; // Highest first
         });
         break;

@@ -33,8 +33,8 @@ export default function JobCard({ job }: JobCardProps) {
   
   // Format salary
   const formatSalary = () => {
-    const min = job.salary_min || job.salary_minimum || job.salary;
-    const max = job.salary_max || job.salary_maximum;
+    const min = job.salary_min ?? job.salary;
+    const max = job.salary_max;
     const currency = job.salary_currency || 'USD';
     
     if (min) {
